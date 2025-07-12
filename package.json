@@ -1,0 +1,23 @@
+{
+	"name": "meta-prompt-marker",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.1.11",
+		"@types/bun": "latest",
+		"@types/chrome": "^0.0.332",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6",
+		"postcss-cli": "^11.0.1",
+		"tailwindcss": "^4.1.11",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"scripts": {
+		"css-build": "postcss src/popup.css -o public/popup.css",
+		"build": "bun build ./src/popup.ts --outdir ./public && bun run css-build"
+	}
+}

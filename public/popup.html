@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meta Prompt Marker</title>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body class="p-8 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div
+      class="relative p-4 overflow-hidden text-white bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent backdrop-blur-xs"
+      ></div>
+      <div class="relative z-10">
+        <div class="flex items-center gap-3">
+          <div class="p-1.5 bg-white/20 rounded-lg backdrop-blur-sm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 6.75A2.25 2.25 0 0 1 5.25 4.5h5.25v15H5.25A2.25 2.25 0 0 1 3 17.25V6.75zm15.75-2.25A2.25 2.25 0 0 1 21 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-5.25v-15h5.25z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-lg font-semibold tracking-tight">Meta Prompts</h1>
+            <p class="text-xs font-medium text-blue-100/90">AI conversation starters</p>
+          </div>
+        </div>
+        <div
+          class="absolute rounded-full -top-4 -right-4 size-24 bg-white/5 blur-xl"
+        ></div>
+        <div
+          class="absolute rounded-full -bottom-2 -left-2 size-16 bg-purple-400/20 blur-lg"
+        ></div>
+      </div>
+    </div>
+    <div class="flex flex-col flex-1 overflow-hidden">
+      <div class="p-4 border-b border-gray-300">
+        <div class="space-y-3 animate-fade-in">
+          <div class="relative">
+            <input
+              type="text"
+              id="prompt-title-input"
+              placeholder="Enter prompt title ..."
+              class="w-full p-2 mb-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="relative">
+            <textarea
+              id="prompt-input"
+              placeholder="Enter your meta-prompt here..."
+              class="transition-all duration-200 resize-none min-h-20 bg-background/80 border-border/60 focus:border-primary/50 focus:ring-2 focus:ring-primary/20 placeholder:text-muted-foreground/60"
+            ></textarea>
+          </div>
+          <div class="relative">
+            <button
+              id="save-button"
+              class="w-full font-medium transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
+            >
+              Save Prompt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 border-b border-gray-300">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search prompt title..."
+        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <div id="prompt-list" class="mx-2"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
